@@ -11,7 +11,7 @@ class MainPage:
         self.driver.find_element(*order).click()
 
     # метод скроллит до кнопки заказ
-    def scroll_t0_order(self):
+    def scroll_to_order(self):
         element = self.driver.find_element(*TestLocatorsMainPage.order_button_at_the_bottom)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 

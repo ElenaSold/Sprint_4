@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
 
 class TestLocatorsMainPage:
+    # заголовок "Самокат на пару дней"
+    header_scooter_for_couple_days = (By.XPATH, ".//div[@class='Home_Header__iJKdX']")
+
     # кнопка заказать в верхней части страницы
     order_button_at_the_top = (By.XPATH, ".//div[@class='Header_Nav__AGCXC']/button[text()='Заказать']")
 

@@ -1,4 +1,5 @@
 from locators.order_page_locators import TestLocatorsOrder
+
 class PageOrder:
 
     # конструктор класса
@@ -66,3 +67,40 @@ class PageOrder:
     # метод переходит со страницы заказа на главную
     def click_logo_scooter(self):
         self.driver.find_element(*TestLocatorsOrder.logo_scooter).click()
+
+    # метод заполняет первую страницу заказа
+    def complete_first_page(self, name, surname, address, station, phone):
+        # заполнили поле Имя
+        self.fill_name('Елена')
+
+        # заполнили поле Фамилия
+        self.fill_surname('Солдатенкова')
+
+        # заполнили поле Адрес
+        self.fill_address('Жукова,3')
+
+        # указали станцию метро
+        self.fill_station(TestLocatorsOrder.station_aeroport)
+
+        # заполнили поле Телефон
+        self.fill_phone('+79099999999')
+
+        # нажали "Далее"
+        self.click_next()
+
+    # метод заполняет вторую страницу заказа
+    def complete_second_page(self, date_of_delivery, days, color, comment):
+        # ввели дату доставки
+        self.fill_date(date_of_delivery)
+
+        # ввели срок аренды
+        self.click_how_long(days)
+
+        # указали цвет
+        self.choose_color(color)
+
+        # оставили комментарий
+        self.fill_comment(comment)
+
+        # нажали Заказать под формой заказа
+        self.click_order_under_the_form()
