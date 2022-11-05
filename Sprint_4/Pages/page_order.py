@@ -1,4 +1,6 @@
 from locators.order_page_locators import TestLocatorsOrder
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions
 
 class PageOrder:
 
@@ -58,6 +60,8 @@ class PageOrder:
 
     # метод подтверждает заказ
     def click_yes(self):
+        WebDriverWait(self.driver, 10).until(
+            expected_conditions.element_to_be_clickable(TestLocatorsOrder.button_yes))
         self.driver.find_element(*TestLocatorsOrder.button_yes).click()
 
     # метод проверяет отображается ли окно подтверждения
@@ -66,24 +70,26 @@ class PageOrder:
 
     # метод переходит со страницы заказа на главную
     def click_logo_scooter(self):
+        WebDriverWait(self.driver, 10).until(
+            expected_conditions.element_to_be_clickable(TestLocatorsOrder.logo_scooter))
         self.driver.find_element(*TestLocatorsOrder.logo_scooter).click()
 
     # метод заполняет первую страницу заказа
     def complete_first_page(self, name, surname, address, station, phone):
         # заполнили поле Имя
-        self.fill_name('Елена')
+        self.fill_name(name)
 
         # заполнили поле Фамилия
-        self.fill_surname('Солдатенкова')
+        self.fill_surname(surname)
 
         # заполнили поле Адрес
-        self.fill_address('Жукова,3')
+        self.fill_address(address)
 
         # указали станцию метро
-        self.fill_station(TestLocatorsOrder.station_aeroport)
+        self.fill_station(station)
 
         # заполнили поле Телефон
-        self.fill_phone('+79099999999')
+        self.fill_phone(phone)
 
         # нажали "Далее"
         self.click_next()
