@@ -14,9 +14,9 @@ class TestLocatorsOrder:
     # клик по станции Орехово
     station_aeroport = (By.XPATH, ".//button[@value='27']")
     # поле телефон
-    phone = (By.XPATH, ".//input[@class='Input_Input__1iN_Z Input_Responsible__1jDKN']")
+    phone = (By.XPATH, ".//input[@placeholder ='* Телефон: на него позвонит курьер']")
     # кнопка Далее
-    button_next = (By.XPATH, ".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']")
+    button_next = (By.XPATH, ".//button[contains(@class, 'Button_Middle')]")
     # поле Когда привезти самокат
     date = (By.XPATH, ".//input[@placeholder='* Когда привезти самокат']")
     # поле Срок аренды
@@ -30,14 +30,14 @@ class TestLocatorsOrder:
     # цвет Серая безысходность
     grey_color = (By.ID, "grey")
     # поле комментарий
-    comment = (By.XPATH, ".//div[@class='Input_InputContainer__3NykH']/input[@class='Input_Input__1iN_Z Input_Responsible__1jDKN']")
+    comment = (By.XPATH, ".//div[contains(@class, 'Input_InputContainer')]/input[contains(@class, 'Input_Responsible')]")
     # кнопка Заказать внизу формы
-    button_order_under_the_form = (By.XPATH, ".//div[@class='Order_Buttons__1xGrp']/button[text()='Заказать']")
+    button_order_under_the_form = (By.XPATH, ".//div[contains(@class, 'Order_Buttons')]/button[text()='Заказать']")
     # кнопка Да в окне подтверждения
-    button_yes = (By.XPATH, ".//div[@class='Order_Buttons__1xGrp']/button[text()='Да']")
+    button_yes = (By.XPATH, ".//div[contains(@class, 'Order_Buttons')]/button[text()='Да']")
     # окно Заказ оформлен
-    confirm_window = (By.XPATH, ".//div[@class='Order_Modal__YZ-d3']")
+    confirm_window = (By.XPATH, ".//div[contains(@class, 'Order_Content')]/div[contains(@class, 'Order_Modal')]")
     # логотип Самокат
-    logo_scooter = (By.XPATH, ".//a[@class='Header_LogoScooter__3lsAR']")
+    logo_scooter = (By.XPATH, ".//a[contains(@class, 'Header_LogoScooter')]")
     # заголовок на главной странице
-    header_scooter = (By.XPATH, ".//div[@class='Home_Header__iJKdX']")
+    header_scooter = (By.XPATH, ".//div[contains(@class, 'Home_Header')]")

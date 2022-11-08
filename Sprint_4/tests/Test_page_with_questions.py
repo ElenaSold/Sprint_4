@@ -7,7 +7,6 @@ from selenium.webdriver.support import expected_conditions
 
 class TestQuestions:
     def test_show_answer_how_much(self, driver):
-        driver = driver
 
         # перешли на страницу приложения
         driver.get('https://qa-scooter.praktikum-services.ru/')
@@ -26,7 +25,7 @@ class TestQuestions:
         questions_page.click_q(TestLocatorsQuestions.q_how_much)
 
         # ожидание отображения ответа
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             expected_conditions.visibility_of_element_located(TestLocatorsQuestions.a_how_much))
 
         # проверили, что ответ на вопрос отображается
@@ -51,7 +50,7 @@ class TestQuestions:
         questions_page.click_q(TestLocatorsQuestions.q_want_some_scooters)
 
         # ожидание отображения ответа
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             expected_conditions.visibility_of_element_located(TestLocatorsQuestions.a_want_some_scooters))
 
         # проверили, что ответ на вопрос отображается
@@ -76,7 +75,7 @@ class TestQuestions:
         questions_page.click_q(TestLocatorsQuestions.q_how_calculated)
 
         # ожидание отображения ответа
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             expected_conditions.visibility_of_element_located(TestLocatorsQuestions.a_how_calculated))
 
         # проверили, что ответ на вопрос отображается
@@ -101,7 +100,7 @@ class TestQuestions:
         questions_page.click_q(TestLocatorsQuestions.q_can_i_order)
 
         # ожидание отображения ответа
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             expected_conditions.visibility_of_element_located(TestLocatorsQuestions.a_can_i_order))
 
         # проверили, что ответ на вопрос отображается
@@ -126,7 +125,7 @@ class TestQuestions:
         questions_page.click_q(TestLocatorsQuestions.q_possible_to_prolong)
 
         # ожидание отображения ответа
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             expected_conditions.visibility_of_element_located(TestLocatorsQuestions.a_possible_to_prolong))
 
         # проверили, что ответ на вопрос отображается
@@ -176,7 +175,7 @@ class TestQuestions:
         questions_page.click_q(TestLocatorsQuestions.q_cancel_an_order)
 
         # ожидание отображения ответа
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             expected_conditions.visibility_of_element_located(TestLocatorsQuestions.a_cancel_an_order))
 
         # проверили, что ответ на вопрос отображается
@@ -201,7 +200,7 @@ class TestQuestions:
         questions_page.click_q(TestLocatorsQuestions.q_bring_from_mcad)
 
         # ожидание отображения ответа
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             expected_conditions.visibility_of_element_located(TestLocatorsQuestions.a_bring_from_mcad))
 
         # проверили, что ответ на вопрос отображается
