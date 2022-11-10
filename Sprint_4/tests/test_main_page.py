@@ -4,7 +4,6 @@ from locators.main_page_locators import TestLocatorsMainPage
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
-
 class TestMainPage:
 
     def test_click_order_at_the_top(self, driver):

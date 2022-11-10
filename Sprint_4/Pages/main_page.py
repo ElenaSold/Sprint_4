@@ -17,7 +17,7 @@ class MainPage:
     # метод скроллит до кнопки заказ
     def scroll_to_order(self):
         WebDriverWait(self.driver, 5).until(
-             expected_conditions.presence_of_element_located(TestLocatorsMainPage.header_scooter_for_couple_days))
+             expected_conditions.presence_of_element_located(TestLocatorsMainPage.order_button_at_the_bottom))
         element = self.driver.find_element(*TestLocatorsMainPage.order_button_at_the_bottom)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
