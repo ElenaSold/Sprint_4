@@ -8,7 +8,7 @@ class TestLocatorsMainPage:
     order_button_at_the_top = (By.XPATH, ".//div[contains(@class, 'Header_Nav')]/button[text()='Заказать']")
 
     # кнопка заказать внизу страницы
-    order_button_at_the_bottom = (By.XPATH, ".//button[contains(@class, 'Button_Middle')]")
+    order_button_at_the_bottom = (By.XPATH, ".//div[contains(@class, 'Home_FinishButton')]/button[text()='Заказать']")
 
     # заголовок "Для кого самокат"
     header_for_whom = (By.XPATH, ".//div[contains(@class, 'Order_Header')]")
